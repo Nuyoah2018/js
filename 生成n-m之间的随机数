@@ -1,0 +1,15 @@
+
+   function getRandomNumber(n, m) {
+        n = Number(n);
+        m = Number(m);
+        if (isNaN(n) || isNaN(m)) {
+            throw new TypeError("请输入数值");
+        }
+        if (n > m) {
+            var temp;
+            temp = n;
+            n = m;
+            m = temp;
+        }
+        return Math.round(Math.random() * (m - n) + n);
+    }
